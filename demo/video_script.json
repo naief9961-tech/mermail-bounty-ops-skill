@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Mermail Bounty Ops",
+    "lines": ["Reusable Agent Skill", "Opportunity email → verified work packet", "No auto-pay • No auto-send • No secret handling"],
+    "narration": "This is Mermail Bounty Ops, a reusable Agent Skill that turns paid-opportunity emails into safe work packets before an agent spends money, signs a wallet, or sends anything."
+  },
+  {
+    "title": "1. Bounded Mermail workflow",
+    "lines": ["list_mailboxes", "search_emails  →  get_email", "optional: get_email_context", "save_draft only when a reply is useful"],
+    "narration": "The workflow composes the existing Mermail tools. It resolves one mailbox, searches a bounded candidate set, reads only selected messages, and can save an unsent clarification draft. A reply remains an external effect that needs exact user approval."
+  },
+  {
+    "title": "2. Three opportunity emails",
+    "lines": ["FIXED: 150 USDC after accepted QA report", "PRIZE: 500 USDC total prizes for an Agent Skill", "RISKY: '1,000 USDC guaranteed' + 20 USDC deposit + seed request"],
+    "narration": "The demo uses three sanitized fixtures: fixed compensation for an accepted QA report, a competitive five-hundred USDC prize pool, and a high-risk message that promises guaranteed payment but asks for a deposit and a seed phrase."
+  },
+  {
+    "title": "3. Deterministic classification",
+    "lines": ["fixed-work       → zero-stated cost → manual platform submit", "competitive-prize → payout NOT guaranteed → manual submit", "malicious         → BLOCKED", "flags: advance payment • secret request • prompt injection"],
+    "narration": "The result preserves the commercial distinction. Fixed work stays conditional on acceptance. A prize pool is never presented as guaranteed income. The unsafe message is blocked because it requests advance payment, secret material, and contains prompt injection."
+  },
+  {
+    "title": "4. Regression test",
+    "lines": ["Bug found during demo build:", "'No deposit / no wallet signature required'", "must NOT become a spend or signing risk.", "", "3 demo regression tests passed"],
+    "narration": "The demo also caught a false positive during development. A sentence saying no deposit and no wallet signature are required was initially misclassified. The parser was fixed, and a regression test now protects that negated safety clause."
+  },
+  {
+    "title": "5. Install and inspect",
+    "lines": ["npx skills add naief9961-tech/mermail-bounty-ops-skill", "  --skill mermail-bounty-ops", "", "python3 demo/run_demo.py", "python3 tests/test_demo.py", "", "writes_executed: []   payments_executed: []"],
+    "narration": "The repository includes the skill, tool and security references, deterministic fixtures, the demo runner, and tests. Install the skill, connect Mermail MCP, and replace the fixtures with selected agent-safe email reads. The offline demo executes no writes and no payments."
+  }
+]

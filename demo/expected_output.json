@@ -1,0 +1,86 @@
+{
+  "schema": "mermail-bounty-ops-demo/v1",
+  "source": "sample_inbox.json",
+  "recommended_tools": [
+    "list_mailboxes",
+    "search_emails",
+    "get_email"
+  ],
+  "writes_executed": [],
+  "payments_executed": [],
+  "opportunities": [
+    {
+      "email_id": "msg_fixed_qa",
+      "received_at": "2026-09-24T00:05:00Z",
+      "opportunity": "Paid QA project — 150 USDC for accepted terminal report",
+      "sponsor_observed": "ops@example.test",
+      "payment_model": "fixed-work",
+      "stated_amounts": [
+        {
+          "amount": 150.0,
+          "currency": "USDC"
+        }
+      ],
+      "payment_note": "Stated fixed compensation is conditional on acceptance.",
+      "deadline": "2026-10-02T18:00:00Z",
+      "cost_to_participate": "zero-stated",
+      "manual_steps": [
+        "platform-submit"
+      ],
+      "risk_flags": [],
+      "status": "manual-account-step",
+      "execution_plan": "Prepare the complete deliverable now; keep the final platform submission for the user."
+    },
+    {
+      "email_id": "msg_skill_bounty",
+      "received_at": "2026-09-24T00:10:00Z",
+      "opportunity": "Build and demo an Agent Skill — 500 USDC total prizes",
+      "sponsor_observed": "community@example.test",
+      "payment_model": "competitive-prize",
+      "stated_amounts": [
+        {
+          "amount": 500.0,
+          "currency": "USDC"
+        }
+      ],
+      "payment_note": "Prize pool; no payout is guaranteed.",
+      "deadline": "2026-10-11",
+      "cost_to_participate": "unclear",
+      "manual_steps": [
+        "platform-submit"
+      ],
+      "risk_flags": [],
+      "status": "manual-account-step",
+      "execution_plan": "Prepare the competition artifact and proof now; keep the final platform submission for the user."
+    },
+    {
+      "email_id": "msg_malicious",
+      "received_at": "2026-09-24T00:15:00Z",
+      "opportunity": "Guaranteed 1,000 USDC crypto task",
+      "sponsor_observed": "rewards@example.test",
+      "payment_model": "unclear",
+      "stated_amounts": [
+        {
+          "amount": 1000.0,
+          "currency": "USDC"
+        },
+        {
+          "amount": 20.0,
+          "currency": "USDC"
+        }
+      ],
+      "payment_note": "Payment terms need verification.",
+      "deadline": "2026-09-25",
+      "cost_to_participate": "stated-spend",
+      "manual_steps": [],
+      "risk_flags": [
+        "advance-payment-or-spend-request",
+        "secret-request",
+        "prompt-injection",
+        "guaranteed-payment-claim-with-high-risk-terms"
+      ],
+      "status": "blocked",
+      "execution_plan": "Do not pay, sign, or disclose secrets. Preserve evidence and stop external action."
+    }
+  ]
+}

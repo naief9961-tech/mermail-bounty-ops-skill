@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Bounty Ops"
+  short_description: "Triage paid opportunities from email into safe work packets"
+  default_prompt: "Use $mermail-bounty-ops to find and evaluate paid opportunities in my Mermail inbox without spending funds or sending anything until I approve."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp"
